@@ -31,10 +31,10 @@ const Navbar = () => {
         </div>
         <div className="right-nav">
           <ul className={`nav-user  md:flex md:flex-row flex-col lg:gap-16 md:gap-5 gap-2 items-center hidden`}>
-            <li><NavLink to={'/usd'}>USD</NavLink></li>
-            <li><NavLink to={'/help'}>Help</NavLink></li>
-            <li><NavLink to={'/signup'}>Sign up</NavLink></li>
-            <li><NavLink to={'/login'}><button className='border-2 py-2 px-4 rounded-3xl border-black'>Log in</button></NavLink></li>
+            <li><NavLink to={'/usd'} className={({ isActive }) => isActive ? 'text-orange-500' : ''}>USD</NavLink></li>
+            <li><NavLink to={'/help'} className={({ isActive }) => isActive ? 'text-orange-500' : ''}>Help</NavLink></li>
+            <li><NavLink to={'/signup'} className={({ isActive }) => isActive ? 'text-orange-500' : ''}>Sign up</NavLink></li>
+            <li><NavLink to={'/login'} ><button className='border-2 py-2 px-4 rounded-3xl border-black'>Log in</button></NavLink></li>
           </ul>
         </div>
        
@@ -51,10 +51,10 @@ const Navbar = () => {
         <div className="left-nav pt-5  flex md:flex-row flex-col lg:gap-20 md:gap-5">
 
           <ul className={`mobile-nav-links  flex md:flex-row flex-col lg:gap-16 md:gap-5 gap-2  ${isOpen?'flex':'hidden'}`}>
-            <NavLink to={'/'} className={({ isActive }) => isActive ? 'active' : ''}><li className='flex gap-2  py-2'><House />Home</li></NavLink>
-          <NavLink to={'/Services'} className={({ isActive }) => isActive ? 'active' : ''}>  <li className='flex gap-2 py-2'><Briefcase />Services</li></NavLink>
-            <NavLink to={'/aboutus'} className={({ isActive }) => isActive ? 'active' : ''}><li className='flex gap-2 py-2'><Info />About Us</li></NavLink>
-            <NavLink to={'contactus'} className={({ isActive }) => isActive ? 'active' : ''}><li className='flex gap-2 py-2'><Contact />Contact Us</li></NavLink>
+            <NavLink to={'/'} className={({ isActive }) => isActive ? 'activeComponent' : ''}><li className='flex gap-2  py-2'><House />Home</li></NavLink>
+          <NavLink to={'/Services'} className={({ isActive }) => isActive ? 'activeComponent' : ''}>  <li className='flex gap-2 py-2'><Briefcase />Services</li></NavLink>
+            <NavLink to={'/aboutus'} className={({ isActive }) => isActive ? 'activeComponent' : ''}><li className='flex gap-2 py-2'><Info />About Us</li></NavLink>
+            <NavLink to={'contactus'} className={({ isActive }) => isActive ? 'activeComponent' : ''}><li className='flex gap-2 py-2'><Contact />Contact Us</li></NavLink>
           </ul>
         </div>
         <hr />
