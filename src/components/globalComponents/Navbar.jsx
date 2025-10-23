@@ -1,74 +1,81 @@
-import React, { useState } from 'react'
-import logo from './logo-1.svg fill.png'
+
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Hamburger from 'hamburger-react';
-import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import { Menu } from 'lucide-react';
-import './navbar.css'
-import { House } from 'lucide-react';
-import { Briefcase } from 'lucide-react';
-import { Info } from 'lucide-react';
-import { Contact } from 'lucide-react';
-import { DollarSign } from 'lucide-react';
-import { Headset } from 'lucide-react';
+import logo from "./logo-1.svg fill.png";
+import { Menu, X, House, Briefcase, Info, Contact, DollarSign, Headset } from "lucide-react";
 
-const Navbar = () => {
-  const [isOpen,setIsOpen]=useState(false)
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const linkClass =
+    "relative block text-gray-800 hover:text-orange-500 transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full";
+
   return (
-    <div className='max-w-dvw flex items-center justify-center py-5'>
-      {/*Desktop Navigation */}
-      <nav className='max-w-7xl  flex md:flex-row md:gap-0  gap-3 flex-col items-center md:justify-between justify-around w-full '>
-        <div className="left-nav flex md:flex-row flex-col gap-2 lg:gap-20 md:gap-5">
-          <img src={logo} alt="" />
-
-          <ul className={`na-links md:flex md:flex-row flex-col lg:gap-16 md:gap-5 gap-2 items-center hidden`}>
-            <li><NavLink to={'/'} className={({ isActive }) => isActive ? 'text-orange-500' : ''}>Home</NavLink></li>
-            <li><NavLink to={'/Services'} className={({ isActive }) => isActive ? 'text-orange-500' : ''}>Services</NavLink></li>
-            <li><NavLink to={'/aboutus'} className={({ isActive }) => isActive ? 'text-orange-500' : ''}>About Us</NavLink></li>
-            <li><NavLink to={'contactus'} className={({ isActive }) => isActive ? 'text-orange-500' : ''}>Contact Us</NavLink></li>
-          </ul>
+    <header className="w-full bg-white shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center py-4">
+        {/* Logo */}
+        <div className="flex items-center gap-2">
+          <img src={logo} alt="logo" className="w-32 md:w-40" />
         </div>
-        <div className="right-nav">
-          <ul className={`nav-user  md:flex md:flex-row flex-col lg:gap-16 md:gap-5 gap-2 items-center hidden`}>
-            <li><NavLink to={'/usd'} className={({ isActive }) => isActive ? 'text-orange-500' : ''}>USD</NavLink></li>
-            <li><NavLink to={'/help'} className={({ isActive }) => isActive ? 'text-orange-500' : ''}>Help</NavLink></li>
-            <li><NavLink to={'/signup'} className={({ isActive }) => isActive ? 'text-orange-500' : ''}>Sign up</NavLink></li>
-            <li><NavLink to={'/login'} ><button className='border-2 py-2 px-4 rounded-3xl border-black'>Log in</button></NavLink></li>
-          </ul>
-        </div>
-       
 
-      </nav>
- 
-       {/* <div className="hamburger block md:hidden">
-        <Hamburger  toggled={isOpen} toggle={()=>setIsOpen((prev)=>!prev)}/>
+        {/* Desktop Links */}
+        <nav className="hidden md:flex gap-10 items-center">
+          <NavLink to="/" className={({ isActive }) => isActive ? `${linkClass} text-orange-500` : linkClass}>Home</NavLink>
+          <NavLink to="/Services" className={({ isActive }) => isActive ? `${linkClass} text-orange-500` : linkClass}>Services</NavLink>
+          <NavLink to="/aboutus" className={({ isActive }) => isActive ? `${linkClass} text-orange-500` : linkClass}>About Us</NavLink>
+          <NavLink to="/contactus" className={({ isActive }) => isActive ? `${linkClass} text-orange-500` : linkClass}>Contact Us</NavLink>
+          <NavLink to="/usd" className={({ isActive }) => isActive ? `${linkClass} text-orange-500` : linkClass}>USD</NavLink>
+          <NavLink to="/help" className={({ isActive }) => isActive ? `${linkClass} text-orange-500` : linkClass}>Help</NavLink>
+          <NavLink to="/signup" className={({ isActive }) => isActive ? `${linkClass} text-orange-500` : linkClass}>Sign Up</NavLink>
+          <NavLink to="/login">
+            <button className="border-2 py-2 px-4 rounded-3xl border-black hover:bg-black hover:text-white transition-all duration-300">
+              Log In
+            </button>
+          </NavLink>
+        </nav>
 
-        </div> */}
-        <div className="hamburger block md:hidden ">
-        <Button onClick={() => setIsOpen(true)}><Menu className='text-orange-600 border-none  outline-none'/></Button> </div>
-      <Drawer anchor="right" open={isOpen} onClose={() => setIsOpen(false)}>
-        <div className="left-nav pt-5  flex md:flex-row flex-col lg:gap-20 md:gap-5">
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-orange-600 focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
 
-          <ul className={`mobile-nav-links  flex md:flex-row flex-col lg:gap-16 md:gap-5 gap-2  ${isOpen?'flex':'hidden'}`}>
-            <NavLink to={'/'} className={({ isActive }) => isActive ? 'activeComponent' : ''}><li className='flex gap-2  py-2'><House />Home</li></NavLink>
-          <NavLink to={'/Services'} className={({ isActive }) => isActive ? 'activeComponent' : ''}>  <li className='flex gap-2 py-2'><Briefcase />Services</li></NavLink>
-            <NavLink to={'/aboutus'} className={({ isActive }) => isActive ? 'activeComponent' : ''}><li className='flex gap-2 py-2'><Info />About Us</li></NavLink>
-            <NavLink to={'contactus'} className={({ isActive }) => isActive ? 'activeComponent' : ''}><li className='flex gap-2 py-2'><Contact />Contact Us</li></NavLink>
-          </ul>
+      {/* Mobile Dropdown Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-white shadow-inner border-t border-gray-100">
+          <nav className="flex flex-col items-start px-6 py-4 gap-3">
+            <NavLink to="/" onClick={() => setIsOpen(false)} className={linkClass}>
+              <div className="flex gap-2 items-center"><House size={18}/> Home</div>
+            </NavLink>
+            <NavLink to="/Services" onClick={() => setIsOpen(false)} className={linkClass}>
+              <div className="flex gap-2 items-center"><Briefcase size={18}/> Services</div>
+            </NavLink>
+            <NavLink to="/aboutus" onClick={() => setIsOpen(false)} className={linkClass}>
+              <div className="flex gap-2 items-center"><Info size={18}/> About Us</div>
+            </NavLink>
+            <NavLink to="/contactus" onClick={() => setIsOpen(false)} className={linkClass}>
+              <div className="flex gap-2 items-center"><Contact size={18}/> Contact Us</div>
+            </NavLink>
+            <NavLink to="/usd" onClick={() => setIsOpen(false)} className={linkClass}>
+              <div className="flex gap-2 items-center"><DollarSign size={18}/> USD</div>
+            </NavLink>
+            <NavLink to="/help" onClick={() => setIsOpen(false)} className={linkClass}>
+              <div className="flex gap-2 items-center"><Headset size={18}/> Help</div>
+            </NavLink>
+            <NavLink to="/signup" onClick={() => setIsOpen(false)} className={linkClass}>
+              <div className="flex gap-2 items-center">Sign Up</div>
+            </NavLink>
+            <NavLink to="/login" onClick={() => setIsOpen(false)}>
+              <button className="border-2 py-2 px-4 rounded-md border-black hover:bg-black hover:text-white transition-all duration-300">
+                Log In
+              </button>
+            </NavLink>
+          </nav>
         </div>
-        <hr />
-        <div className="right-nav  pt-1">
-          <ul className={`mobile-nav-user   flex md:flex-row flex-col lg:gap-16 md:gap-5 gap-2  ${isOpen?'flex':'hidden'}`}>
-            <NavLink to={'/usd'}><li className='flex gap-2 py-2'><DollarSign />USD</li></NavLink>
-            <NavLink to={'/help'}><li className='flex gap-2 py-2'><Headset />Help</li></NavLink>
-            <NavLink to={'/signup'}><li className='flex gap-2 py-2'>Sign up</li></NavLink>
-            <NavLink to={'/login'}><li className='flex gap-2 py-2'><button className='border-2 py-2 px-4 rounded-md border-black'>Log in</button></li></NavLink>
-          </ul>
-        </div>
-      </Drawer>
-    </div>
-  )
+      )}
+    </header>
+  );
 }
-
-export default Navbar
