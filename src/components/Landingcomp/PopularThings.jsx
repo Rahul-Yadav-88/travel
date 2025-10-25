@@ -73,7 +73,7 @@ export default function PopularThings() {
 
       {/* Carousel Container */}
       <div 
-        className="relative max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8"
+        className="relative max-w-6xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
