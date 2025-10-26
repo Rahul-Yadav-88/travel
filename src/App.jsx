@@ -1,9 +1,13 @@
 
+
+
+import React from "react";
 import Page from "./pages/Landingpage/Page"
-export default function App() {
-  return (
-    <>
-    <Page/>
-    </>
-  )
+
+function App() {
+  return <>
+    <Page />
+  </>
 }
+
+export default App;
