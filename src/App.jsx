@@ -2,11 +2,18 @@
 
 
 import React from "react";
-import Page from "./pages/Contactuspage/Page"
+import ContactUsPage from "./pages/Contactuspage/ContactUsPage"
+import LandingPage from './pages/Landingpage/LandingPage'
+import { BrowserRouter,Routes,Route } from "react-router-dom";
 
 function App() {
   return <>
-    <Page />
+  <BrowserRouter>
+  <Routes>
+    <Route path="/" element={<LandingPage/>}/>
+    <Route path="/contactus" element={<ContactUsPage/>}/>
+  </Routes>
+  </BrowserRouter>
   </>
 }
 

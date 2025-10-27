@@ -11,7 +11,7 @@ import PopularThings from '../../components/Landingcomp/PopularThings'
 import TrendingDestinations from '../../components/Landingcomp/TrendingDestinations'
 import Hero from '../../components/Landingcomp/Hero'
 
-function Page() {
+function LandingPage() {
   return (
     <>
     <Navbar/>
@@ -29,4 +29,4 @@ function Page() {
   )
 }
 
-export default Page
+export default LandingPage
