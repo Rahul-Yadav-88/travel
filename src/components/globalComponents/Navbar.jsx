@@ -24,14 +24,14 @@ export default function Navbar() {
           <NavLink to="/Services" className={({ isActive }) => isActive ? `${linkClass} text-orange-500` : linkClass}>Services</NavLink>
           <NavLink to="/aboutus" className={({ isActive }) => isActive ? `${linkClass} text-orange-500` : linkClass}>About Us</NavLink>
           <NavLink to="/contactus" className={({ isActive }) => isActive ? `${linkClass} text-orange-500` : linkClass}>Contact Us</NavLink>
-          <NavLink to="/usd" className={({ isActive }) => isActive ? `${linkClass} text-orange-500` : linkClass}>USD</NavLink>
+          {/* <NavLink to="/usd" className={({ isActive }) => isActive ? `${linkClass} text-orange-500` : linkClass}>USD</NavLink>
           <NavLink to="/help" className={({ isActive }) => isActive ? `${linkClass} text-orange-500` : linkClass}>Help</NavLink>
           <NavLink to="/signup" className={({ isActive }) => isActive ? `${linkClass} text-orange-500` : linkClass}>Sign Up</NavLink>
           <NavLink to="/login">
             <button className="border-2 py-2 px-4 rounded-3xl border-black hover:bg-black hover:text-white transition-all duration-300">
               Log In
             </button>
-          </NavLink>
+          </NavLink> */}
         </nav>
 
         {/* Mobile Menu Button */}
