@@ -1,9 +1,8 @@
-
 export default function Footer() {
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="flex flex-col sm:flex-row justify-between items-start mb-16 gap-6">
+        {/* <div className="flex flex-col sm:flex-row justify-between items-start mb-16 gap-6">
           <div className="text-sm">
             <span className="text-gray-900">Speak to our expert at </span>
             <a
@@ -16,12 +15,12 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <span className="text-sm text-gray-900">Follow Us</span>
           </div>
-        </div>
+        </div> */}
 
-        <div
+        {/* <div
           className="w-full h-px mb-16"
           style={{ backgroundColor: "#EB662B26" }}
-        ></div>
+        ></div> */}
 
         {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -45,7 +44,7 @@ export default function Footer() {
                   href="#"
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  About Us
+                 Home
                 </a>
               </li>
               <li>
@@ -53,7 +52,7 @@ export default function Footer() {
                   href="#"
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  Tourz Reviews
+                  Services
                 </a>
               </li>
               <li>
@@ -69,10 +68,10 @@ export default function Footer() {
                   href="#"
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  Travel Guides
+                   About Us
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#"
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
@@ -87,28 +86,28 @@ export default function Footer() {
                 >
                   Cookie Policy
                 </a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a
                   href="#"
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   Legal
                 </a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a
                   href="#"
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   Sitemap
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
           {/* Support */}
-          <div>
+          {/* <div>
             <h3 className="text-gray-900 font-semibold mb-6">Support</h3>
             <ul className="space-y-3">
               <li>
@@ -144,7 +143,7 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Newsletter */}
           <div>

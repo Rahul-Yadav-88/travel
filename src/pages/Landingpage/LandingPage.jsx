@@ -1,11 +1,11 @@
 import React from 'react'
 import CustomerReviews from '../../components/Landingcomp/CustomerReviews'
-import TravelArticles from '../../components/Landingcomp/TravelArticles'
+// import TravelArticles from '../../components/Landingcomp/TravelArticles'
 import Newsletter from '../../components/Landingcomp/Newsletter'
 import Navbar from '../../components/globalComponents/Navbar'
 import Footer from '../../components/globalComponents/Footer'
 import StatsFeatureCards from '../../components/Landingcomp/StatsFeatureCards'
-import PopularSection from '../../components/Landingcomp/PopularSection'
+// import PopularSection from '../../components/Landingcomp/PopularSection'
 import TrustedBrands from '../../components/Landingcomp/TrustedBrands'
 import PopularThings from '../../components/Landingcomp/PopularThings'
 import TrendingDestinations from '../../components/Landingcomp/TrendingDestinations'
@@ -21,8 +21,8 @@ function LandingPage() {
     <TrendingDestinations/>
     <CustomerReviews/>
     <StatsFeatureCards/>
-    <TravelArticles/>
-    <PopularSection/>
+    {/* <TravelArticles/> */}
+    {/* <PopularSection/> */}
     <Newsletter/>
     <Footer/>
     </>

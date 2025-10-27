@@ -17,9 +17,9 @@ const ContactUs = () => {
                     <p className='font-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Deleniti cum earum doloribus itaque.</p>
                     <ul className="address flex gap-3 flex-col">
-                        <li className='flex gap-2'><LocateFixed /> <span>Aeren Building, Plot No. 14, IT Park Rd, Chandigarh 160101</span></li>
-                        <li className='flex gap-2'><Phone /> <span>+1 13987227</span></li>
-                        <li className='flex gap-2'><Mail /> <span>contact@viatours.com</span></li>
+                        <li className='flex gap-2'><LocateFixed /> <span>Shop No.24, First Floor,CSC, DDA Market, Sector-22, HAF,PKT-B, Dwarka, New Delhi-110075</span></li>
+                        <li className='flex gap-2'><Phone /> <span>+91 9711165079</span></li>
+                        <li className='flex gap-2'><Mail /> <span>tcstravels2007@gmail.com</span></li>
                     </ul></div>
 
                 <div className="p-7 mb-10 shadow-lg rounded-lg form md:w-1/3">

@@ -8,51 +8,58 @@ export default function App() {
   const services = [
     {
       icon: <Briefcase className="w-8 h-8 stroke-[1.5]" />,
-      title: "Strategic Consulting",
-      shortDesc: "Guiding your business with expert advice on market analysis, risk assessment, and long-term vision.",
-      fullDesc: "We provide comprehensive strategic roadmaps to ensure your business goals are met efficiently. Our consulting includes competitive analysis, operational optimization, and digital transformation planning, focusing on measurable growth and sustainable competitive advantage in dynamic markets.",
+      title: "Corporate Employee Transport",
+      shortDesc: "Safe, reliable pickup & drop services with route planning, tracking, and attendance reports.",
+      fullDesc: "We offer end-to-end corporate employee transport solutions, ensuring staff travel is safe and punctual. Our service includes detailed **route planning**, real-time **GPS tracking**, and automated **attendance reports** for seamless operations management. This focuses on providing disciplined drivers and responsive operations.",
     },
     {
       icon: <TrendingUp className="w-8 h-8 stroke-[1.5]" />,
-      title: "Performance Management",
-      shortDesc: "Implementing KPIs and frameworks to monitor, evaluate, and elevate individual and team performance.",
-      fullDesc: "Our service helps establish clear objectives and key results (OKRs) across your organization. We deploy custom dashboards and reporting tools for real-time tracking, ensuring accountability and continuous improvement cycles that drive business outcomes.",
+      title: "Airport Transfers (24x7)",
+      shortDesc: "Smooth, punctual, and reliable airport pickup and drop services with flight tracking.",
+      fullDesc: "Experience stress-free travel with our **airport transfer service**. We guarantee smooth and punctual pickup & drop services with **real-time flight tracking** and **$24\\times7$ availability**. Ideal for corporate transfers and executives needing reliable connectivity to and from the airport.",
     },
     {
       icon: <Handshake className="w-8 h-8 stroke-[1.5]" />,
-      title: "Executive Coaching",
-      shortDesc: "Personalized development programs for leadership, communication, and emotional intelligence.",
-      fullDesc: "We partner with senior leaders to unlock their full potential. Our coaching focuses on refining decision-making skills, mastering conflict resolution, and building high-performing cultures that translate directly into better organizational results and innovation.",
+      title: "Inter-City / Outstation Rentals",
+      shortDesc: "Affordable, air-conditioned vehicles for weekend trips, training camps, and business tours.",
+      fullDesc: "Need transport outside the city? We provide affordable, **air-conditioned vehicles** for all your long-distance needs, including weekend trips, training camps, corporate retreats, and specialized business tours. All rentals come with a dedicated, experienced driver.",
     },
     {
       icon: <Megaphone className="w-8 h-8 stroke-[1.5]" />,
-      title: "Digital Marketing",
-      shortDesc: "Full-funnel strategies covering SEO, paid media, content creation, and social engagement.",
-      fullDesc: "Drive customer acquisition and brand visibility with our data-centric digital marketing services. We manage campaigns from ideation to execution, optimizing for conversion rates and maximizing return on ad spend across all major platforms.",
+      title: "Custom Fleet Management",
+      shortDesc: "Fully managed, dedicated fleets for regular employee movement or client transfers.",
+      fullDesc: "Our custom fleet management service provides **fully managed, dedicated fleets** designed for regular employee commuting or bespoke client transfer requirements. This includes custom vehicle branding, maintenance, and 24/7 monitoring for complete operational peace of mind.",
     },
     {
       icon: <Map className="w-8 h-8 stroke-[1.5]" />,
-      title: "Custom Solutions",
-      shortDesc: "Developing tailored software and system integrations to solve unique business challenges.",
-      fullDesc: "When off-the-shelf software falls short, we design and build bespoke platforms. This includes enterprise resource planning (ERP) systems, specialized analytics tools, and secure cloud infrastructure tailored precisely to your operational workflow and scale.",
+      title: "Educational & Institutional Transport",
+      shortDesc: "Dedicated buses with verified drivers, CCTV cameras, and RTO compliance for student safety.",
+      fullDesc: "We specialize in secure and compliant transport for educational institutions. Services include dedicated buses with **verified drivers and attendants**, on-board **CCTV cameras**, and strict **compliance with RTO norms**, prioritizing student and staff safety above all.",
     },
     {
       icon: <PenTool className="w-8 h-8 stroke-[1.5]" />,
-      title: "Business Planning",
-      shortDesc: "Comprehensive financial modeling, market entry strategies, and risk mitigation plans.",
-      fullDesc: "Our planning service provides the blueprint for your future success. We create detailed five-year financial forecasts, analyze potential investment scenarios, and develop robust contingency plans to safeguard against market volatility and operational disruption.",
+      title: "Safety & Compliance Highlights",
+      shortDesc: "A summary of our commitment to safety, technology, and regulatory adherence for all services.",
+      fullDesc: "Our dedication to safety is non-negotiable. Every vehicle in our fleet is supported by:\n\n" +
+                "\\begin{itemize}\n" +
+                "    \\item **GPS Tracking & CCTV:** Real-time location monitoring and surveillance.\n" +
+                "    \\item **Vehicle Maintenance:** Vehicles are less than 5 years old and rigorously maintained.\n" +
+                "    \\item **Speed Governors:** Mandatory installation for regulated driving speeds.\n" +
+                "    \\item **Police-Verified Drivers:** Thorough background checks on all personnel.\n" +
+                "    \\item **$24\\times7$ Support:** Non-stop operational and customer support.\n" +
+                "\\end{itemize}",
     },
     {
       icon: <Code className="w-8 h-8 stroke-[1.5]" />,
-      title: "Software Development",
-      shortDesc: "Building scalable, secure, and modern web and mobile applications from scratch.",
-      fullDesc: "We leverage agile methodologies to deliver cutting-edge software. Our expertise spans full-stack development, mobile apps (iOS/Android), and API integration, ensuring a seamless, high-performance product that users love.",
+      title: "Full-Spectrum Mobility Solutions",
+      shortDesc: "Providing end-to-end mobility solutions for businesses, institutions, and individual clients.",
+      fullDesc: "At TCS Travels, we are your partner in mobility. We provide **end-to-end solutions** backed by **real-time tracking**, **disciplined drivers**, and highly **responsive operations**. Our diverse range of services ensures we can cater to any transport requirement, from a single airport transfer to large-scale corporate fleet needs.",
     },
     {
       icon: <Users className="w-8 h-8 stroke-[1.5]" />,
-      title: "Talent Acquisition",
-      shortDesc: "Identifying and securing top-tier talent to fill critical roles within your organization.",
-      fullDesc: "Beyond simple recruitment, we offer strategic talent mapping, employer branding, and competency-based interviewing. We ensure that every hire not only meets the technical requirements but also aligns perfectly with your company's culture and long-term objectives.",
+      title: "TCS Travels Overview",
+      shortDesc: "Explore our complete range of transport services with 24/7 monitoring.",
+      fullDesc: "TCS Travels offers a complete range of services, including corporate staff buses, airport transfers, outstation rentals, and custom fleet management. Our core principle is delivering disciplined, safe, and responsive transport every time, making us the trusted choice for all your travel needs.",
     }
   ];
 
@@ -83,7 +90,7 @@ export default function App() {
 
             // Determine dynamic classes based on expansion state
             let cardClasses = `
-              bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg transition-all duration-500 overflow-hidden 
+              bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg transition-all duration-700 overflow-hidden 
               col-span-1 sm:col-span-2 md:col-span-2 
             `;
             
@@ -160,14 +167,13 @@ export default function App() {
                 {/* Expanded Content with Animation */}
                 <div 
                   className={`
-                    transition-all duration-500 ease-in-out 
-                    ${isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} 
-                    overflow-hidden
+                    transition-all duration-700 ease-in-out 
+                    ${isExpanded ? 'max-h-[600px] opacity-100 overflow-y-auto' : 'max-h-0 opacity-0 overflow-y-hidden'} 
                   `}
                 >
                   <div className="px-8 pb-8">
                     <div className="border-t border-gray-200 pt-4">
-                      <p className="text-gray-700 text-base leading-relaxed mb-4">
+                      <p className="text-gray-700 text-base leading-relaxed mb-4 whitespace-pre-wrap">
                         {service.fullDesc}
                       </p>
 

@@ -1,222 +1,146 @@
-
-
-// import { useState } from "react"
-
-// export default function HeroSection() {
-//   const [where, setWhere] = useState("")
-//   const [when, setWhen] = useState("")
-
-//   return (
-//     <main className="min-h-screen bg-gradient-to-r from-orange-50 via-pink-50 to-orange-100">
-//       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
-//         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-//           {/* Left Content Section */}
-//           <div className="space-y-8 pt-4">
-//             {/* Tagline */}
-//             <p className="text-sm font-medium text-gray-700 tracking-wide">
-//               One site, 300,000+ experiences you'll remember
-//             </p>
-
-//             {/* Main Heading */}
-//             <div>
-//               <h1 className="text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
-//                 Your Adventure
-//                 <br />
-//                 Travel Experts
-//                 <br />
-//                 In{" "}
-//                 <span className="relative inline-block">
-//                   <span className="text-orange-500">World!</span>
-//                   <span className="absolute bottom-0 left-0 right-0 h-1 bg-orange-500 rounded-full"></span>
-//                 </span>
-//               </h1>
-//             </div>
-
-//             {/* Red Accent Dot */}
-//             <div className="flex items-center gap-3">
-//               <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-//             </div>
-
-//             {/* Search Filters Card */}
-//             <div className="bg-white rounded-2xl p-8 shadow-md space-y-6 max-w-md">
-//               <div className="grid grid-cols-2 gap-6">
-//                 <div className="space-y-2">
-//                   <label className="block text-xs font-bold text-gray-800 uppercase tracking-wider">Where</label>
-//                   <input
-//                     type="text"
-//                     placeholder="Search destinations"
-//                     value={where}
-//                     onChange={(e) => setWhere(e.target.value)}
-//                     className="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-all"
-//                   />
-//                 </div>
-//                 <div className="space-y-2">
-//                   <label className="block text-xs font-bold text-gray-800 uppercase tracking-wider">When</label>
-//                   <input
-//                     type="text"
-//                     placeholder="Feb 03 - Mar 14"
-//                     value={when}
-//                     onChange={(e) => setWhen(e.target.value)}
-//                     className="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-all"
-//                   />
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* Right Image Collage */}
-//           <div className="relative h-full min-h-96 flex items-center justify-center lg:justify-end">
-//             <div className="relative w-full max-w-md h-96 lg:h-full lg:min-h-96">
-//               {/* Top Left - Beach Image */}
-//               <div className="absolute top-0 left-0 w-56 h-44 rounded-3xl overflow-hidden shadow-xl">
-//                 <img
-//                   src={image1}
-//                   alt="Tropical beach with turquoise water"
-//                   className="w-full h-full object-cover"
-//                 />
-//               </div>
-
-//               {/* Top Right - Mountain Hiker */}
-//               <div className="absolute top-0 right-0 w-44 h-56 rounded-3xl overflow-hidden shadow-xl">
-//                 <img
-//                   src={image2}
-//                   alt="Adventure group with backpacks"
-//                   className="w-full h-full object-cover"
-//                 />
-//               </div>
-
-//               {/* Bottom Left - Landscape */}
-//               <div className="absolute bottom-0 left-0 w-56 h-44 rounded-3xl overflow-hidden shadow-xl">
-//                 <img
-//                   src={image3}
-//                   alt="Scenic mountain landscape"
-//                   className="w-full h-full object-cover"
-//                 />
-//               </div>
-
-//               {/* Bottom Right - Mountain Peak */}
-//               <div className="absolute bottom-0 right-0 w-44 h-56 rounded-3xl overflow-hidden shadow-xl">
-//                 <img
-//                   src={image4}
-//                   alt="Mountain hiking adventure"
-//                   className="w-full  h-full object-cover"
-//                 />
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </main>
-//   )
-// }
-
-
-import { useState } from "react"
+"use client";
+import { motion as Motion } from "framer-motion";
 
 export default function HeroSection() {
-  const [where, setWhere] = useState("")
-  const [when, setWhen] = useState("")
-
   return (
-    <main className="min-h-screen bg-gradient-to-r from-orange-50 via-pink-50 to-orange-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 xl:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
+    <main className="bg-linear-to-r from-orange-50 via-pink-50 to-orange-100 overflow-hidden perspective-[1000px]">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-8 sm:py-12 lg:py-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+
           {/* Left Content Section */}
-          <div className="space-y-6 sm:space-y-8 pt-2 sm:pt-4">
-            {/* Tagline */}
-            <p className="text-xs sm:text-sm font-medium text-gray-700 tracking-wide">
-              One site, 300,000+ experiences you'll remember
-            </p>
+          <Motion.div
+            className="space-y-6 sm:space-y-8"
+            initial={{ opacity: 0, x: -80, rotateY: -20 }}
+            whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <Motion.p
+              className="text-xs sm:text-sm font-medium text-gray-700 tracking-wide"
+              initial={{ opacity: 0, y: 30, rotateX: 15 }}
+              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              We manage routes, schedules, and people movement so you can focus
+              on what matters most — your business.
+            </Motion.p>
 
-            {/* Main Heading */}
-            <div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
-                Your Adventure
-                <br />
-                Travel Experts
-                <br />
-                In{" "}
-                <span className="relative inline-block">
-                  <span className="text-orange-500">World!</span>
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 sm:h-1 bg-orange-500 rounded-full"></span>
-                </span>
-              </h1>
-            </div>
+            <Motion.h1
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight"
+              initial={{ opacity: 0, rotateX: 20, scale: 0.9 }}
+              whileInView={{ opacity: 1, rotateX: 0, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              At TCS Travels,
+              <br />
+              we deliver more than just transportation — we deliver
+              <br />
+              <span className="text-orange-500 relative inline-block">
+                trust, consistency, reliability.
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500 rounded-full"></span>
+              </span>
+            </Motion.h1>
 
-            {/* Red Accent Dot */}
-            <div className="flex items-center gap-3">
-              <div className="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full"></div>
-            </div>
+            <Motion.button
+              className="
+                bg-orange-500 
+                text-white 
+                font-semibold 
+                rounded-full 
+                px-5 
+                py-3 
+                sm:px-6 
+                sm:py-3.5 
+                md:px-8 
+                md:py-4 
+                text-base 
+                sm:text-lg 
+                md:text-xl 
+                hover:bg-orange-700 
+                transition-all 
+                duration-300 
+                shadow-md 
+                hover:shadow-2xl
+              "
+              initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
+              whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+              transition={{ delay: 0.6, duration: 0.7, ease: "easeOut" }}
+              viewport={{ once: true }}
+              whileHover={{
+                rotateX: 10,
+                rotateY: -10,
+                scale: 1.05,
+                transition: { type: "spring", stiffness: 200 },
+              }}
+            >
+              Talk to Our Transport Consultant
+            </Motion.button>
 
-            {/* Search Filters Card */}
-            <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-md space-y-6 max-w-full sm:max-w-md">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                <div className="space-y-2">
-                  <label className="block text-xs font-bold text-gray-800 uppercase tracking-wider">Where</label>
-                  <input
-                    type="text"
-                    placeholder="Search destinations"
-                    value={where}
-                    onChange={(e) => setWhere(e.target.value)}
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-all"
+            <Motion.p
+              className="
+                text-sm 
+                sm:text-base 
+                md:text-lg 
+                lg:text-xl 
+                text-gray-800 
+                leading-relaxed 
+                max-w-[90%] 
+                sm:max-w-2xl 
+                font-semibold
+              "
+              initial={{ opacity: 0, y: 30, rotateX: 15 }}
+              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              Your workforce’s journey is our responsibility — and we take it
+              seriously.
+            </Motion.p>
+          </Motion.div>
+
+          {/* Right Image Grid with 3D Hover */}
+          <Motion.div
+            className="relative w-full h-96 sm:h-[28rem] md:h-[32rem] lg:h-[30vw]"
+            initial={{ opacity: 0, scale: 0.8, rotateY: 15 }}
+            whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <div className="relative w-full h-full max-w-lg mx-auto">
+              {[
+                { src: "/Images/6.jpg", alt: "Tropical beach", pos: "top-0 left-0 w-[48%] h-[45%]" },
+                { src: "/Images/7.jpg", alt: "Adventure group", pos: "top-0 right-0 w-[48%] h-[52%]" },
+                { src: "/Images/8.jpg", alt: "Mountain landscape", pos: "bottom-0 left-0 w-[48%] h-[52%]" },
+                { src: "/Images/9.jpg", alt: "Hiking adventure", pos: "bottom-0 right-0 w-[48%] h-[45%]" },
+              ].map((img, i) => (
+                <Motion.div
+                  key={i}
+                  className={`absolute ${img.pos} rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-xl`}
+                  initial={{ opacity: 0, y: 40, rotateX: 15 }}
+                  whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                  transition={{ delay: i * 0.2 + 0.5, duration: 0.6 }}
+                  viewport={{ once: true }}
+                  whileHover={{
+                    rotateX: 10,
+                    rotateY: 10,
+                    scale: 1.08,
+                    transition: { type: "spring", stiffness: 200 },
+                  }}
+                >
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
                   />
-                </div>
-                <div className="space-y-2">
-                  <label className="block text-xs font-bold text-gray-800 uppercase tracking-wider">When</label>
-                  <input
-                    type="text"
-                    placeholder="Feb 03 - Mar 14"
-                    value={when}
-                    onChange={(e) => setWhen(e.target.value)}
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-all"
-                  />
-                </div>
-              </div>
+                </Motion.div>
+              ))}
             </div>
-          </div>
-
-          {/* Right Image Collage - Fully Responsive */}
-          <div className="relative w-full h-96 sm:h-[28rem] md:h-[32rem] lg:h-[36rem] xl:h-[40rem] flex items-center justify-center lg:justify-end mt-8 lg:mt-0">
-            <div className="relative w-full h-full max-w-lg">
-              {/* Top Left - Beach Image */}
-              <div className="absolute top-0 left-0 w-[48%] h-[45%] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-xl transition-transform hover:scale-105 duration-300">
-                <img
-                  src="/Images/6.jpg"
-                  alt="Tropical beach with turquoise water"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Top Right - Mountain Hiker */}
-              <div className="absolute top-0 right-0 w-[48%] h-[52%] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-xl transition-transform hover:scale-105 duration-300">
-                <img
-                  src="/Images/7.jpg"
-                  alt="Adventure group with backpacks"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Bottom Left - Landscape */}
-              <div className="absolute bottom-0 left-0 w-[48%] h-[52%] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-xl transition-transform hover:scale-105 duration-300">
-                <img
-                  src="/Images/8.jpg"
-                  alt="Scenic mountain landscape"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Bottom Right - Mountain Peak */}
-              <div className="absolute bottom-0 right-0 w-[48%] h-[45%] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-xl transition-transform hover:scale-105 duration-300">
-                <img
-                  src="/Images/9.jpg"
-                  alt="Mountain hiking adventure"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
+          </Motion.div>
         </div>
       </div>
     </main>
-  )
+  );
 }

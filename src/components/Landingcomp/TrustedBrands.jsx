@@ -1,55 +1,63 @@
+"use client";
+import { motion as M } from "framer-motion";
+
 export default function TrustedBrands() {
   const brands = [
-    "Amazon",
-    "AMD", 
-    "Dropcam",
-    "Logitech",
-    "Spotify",
-    "Amazon",
-    "AMD",
-    "Dropcam"
+    { name: "Amazon", logo: "/Images/1.jpeg" },
+    { name: "AMD", logo: "/Images/2.jpeg" },
+    { name: "Dropcam", logo: "/Images/3.jpeg" },
+    { name: "Logitech", logo: "/Images/4.jpeg" },
+    { name: "Spotify", logo: "/Images/5.jpeg" },
+    { name: "Google", logo: "/Images/6.jpeg" },
   ];
+
+  const allBrands = [...brands, ...brands]; // duplicate for infinite scroll
 
   return (
     <div className="w-full bg-white py-12 sm:py-16 md:py-20 overflow-hidden">
       {/* Heading */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 mb-8 sm:mb-12 md:mb-16">
         <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800">
-          Trusted by the world"s best
+          Trusted by the world’s best
         </h2>
       </div>
 
-      {/* Sliding Logo Container - Full width */}
+      {/* Scrolling Logo Section */}
       <div className="relative w-full">
-        {/* Gradient Overlays - Smaller on mobile, larger on desktop */}
-        <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 lg:w-48 xl:w-56 bg-gradient-to-r from-white via-white/90 to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 lg:w-48 xl:w-56 bg-gradient-to-l from-white via-white/90 to-transparent z-10 pointer-events-none"></div>
-
-        {/* Slider */}
-        <div className="flex animate-scroll items-center py-4">
-          {/* First set of brands */}
-          {brands.map((brand, index) => (
-            <div
-              key={`first-${index}`}
-              className="flex-shrink-0 px-6 sm:px-8 md:px-12 lg:px-16"
+        <M.div
+          className="flex animate-scroll items-center py-4"
+          whileHover={{ scale: 1.01 }}
+        >
+          {allBrands.map((brand, index) => (
+            <M.div
+              key={index}
+              className="shrink-0 px-6 sm:px-8 md:px-12 lg:px-16"
+              whileHover={{
+                rotateY: 15,
+                rotateX: 10,
+                scale: 1.1,
+                transition: { type: "spring", stiffness: 200, damping: 10 },
+              }}
+              whileTap={{ scale: 0.95 }}
             >
-              <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 whitespace-nowrap hover:text-orange-500 transition-colors duration-300 cursor-pointer select-none">
-                {brand}
-              </span>
-            </div>
+              <M.img
+                src={brand.logo}
+                alt={brand.name}
+                loading="lazy"
+                className="h-14 sm:h-18 md:h-20 rounded-2xl lg:h-24 xl:h-28 object-contain mix-blend-multiply brightness-110"
+                animate={{
+                  y: [0, -5, 0],
+                  rotateZ: [0, 1, -1, 0],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+            </M.div>
           ))}
-          {/* Duplicate set for seamless loop */}
-          {brands.map((brand, index) => (
-            <div
-              key={`second-${index}`}
-              className="flex-shrink-0 px-6 sm:px-8 md:px-12 lg:px-16"
-            >
-              <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 whitespace-nowrap hover:text-orange-500 transition-colors duration-300 cursor-pointer select-none">
-                {brand}
-              </span>
-            </div>
-          ))}
-        </div>
+        </M.div>
       </div>
 
       <style jsx>{`
@@ -61,11 +69,9 @@ export default function TrustedBrands() {
             transform: translateX(-50%);
           }
         }
-
         .animate-scroll {
-          animation: scroll 30s linear infinite;
+          animation: scroll 25s linear infinite;
         }
-
         .animate-scroll:hover {
           animation-play-state: paused;
         }
