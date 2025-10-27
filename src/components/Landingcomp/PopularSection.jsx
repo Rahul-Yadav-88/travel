@@ -86,7 +86,7 @@ export default function PopularSection() {
             <a
               key={index}
               href={item.link}
-              className="text-sm sm:text-base text-gray-700 hover:text-orange-500 transition-colors duration-300 relative inline-block w-fit after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full"
+              className="text-sm sm:text-base text-gray-700 hover:text-orange-500 transition-colors duration-300 relative inline-block w-fit after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full"
             >
               {item.name}
             </a>

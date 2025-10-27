@@ -121,7 +121,7 @@ export default function BusServicesCarousel() {
                       className="absolute bottom-0 left-0 right-0 p-8 text-white"
                       initial={{ opacity: 0, y: 40 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.9, delay: 0.3 }}
+                      transition={{ duration: 1, delay: 1 }}
                     >
                       <h3 className="text-3xl sm:text-4xl font-bold mb-2">{service.title}</h3>
                       <p className="text-gray-200 text-base sm:text-lg max-w-2xl">
