@@ -25,13 +25,13 @@ const ContactUs = () => {
                 <div className="p-7 mb-10 shadow-lg rounded-lg form md:w-1/3">
                     <form className='flex flex-col gap-4' action="">
                         <div className='flex gap-2'>
-                            <input  placeholder='Name' className='rounded-sm  border-1 focus:outline-orange-500   hover:border-b-orange-500 border-1 border-black w-1/2 py-1 px-2' type="text" id='name' name='name' />
-                            <input  placeholder='Last Name' className='rounded-sm  border-1 focus:outline-orange-500   hover:border-b-orange-500 border-1 border-black w-1/2 py-1 px-2' type="text" id='Last name' />
+                            <input  placeholder='Name' className='bg-stone-100   border-none rounded-md focus:outline-orange-500  hover:outline-1g hover:outline-b-orange-500 border-1 border-black w-1/2 py-2 px-2' type="text" id='name' name='name' />
+                            <input  placeholder='Last Name' className='bg-stone-100   border-none rounded-md focus:outline-orange-500  hover:outline-1g hover:outline-b-orange-500 border-1 border-black w-1/2 py-2 px-2' type="text" id='Last name' />
                         </div>
 
-                        <input placeholder='Email' className='rounded-sm  border-1 focus:outline-orange-500   hover:border-b-orange-500 px-2 py-1 border-1 border-black' type="email" id='Email' />
-                        <input placeholder='Phone' className='rounded-sm  border-1 focus:outline-orange-500   hover:border-b-orange-500 px-2 py-1 border-1 border-black' type="phone" id='Phone' />
-                        <textarea placeholder='Your Message' className='rounded-sm  border-1 focus:outline-orange-500   hover:border-b-orange-500 px-2 py-1 border-1 border-black' name="" id=""></textarea>
+                        <input placeholder='Email' className='bg-stone-100   border-none rounded-md focus:outline-orange-500  hover:outline-1g hover:outline-b-orange-500 px-2 py-2 border-1 border-black' type="email" id='Email' />
+                        <input placeholder='Phone' className='bg-stone-100   border-none rounded-md focus:outline-orange-500  hover:outline-1g hover:outline-b-orange-500 px-2 py-2 border-1 border-black' type="phone" id='Phone' />
+                        <textarea placeholder='Your Message' className='bg-stone-100   border-none rounded-md focus:outline-orange-500   hover:border-b-orange-500 px-2 py-1 border-1 border-black' name="" id=""></textarea>
                         <button type="submit" className='hover:bg-orange-600 bg-orange-500 mt-5 p-2 rounded-xl text-white'>Send Message</button>
 
                     </form>
