@@ -66,7 +66,7 @@ export default function PopularThings() {
             Popular things to do
           </h2>
           <button className="text-sm sm:text-base text-gray-700 hover:text-orange-500 transition-colors duration-300 font-medium">
-            See all
+            See al
           </button>
         </div>
       </div>
