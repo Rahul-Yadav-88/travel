@@ -1,4 +1,8 @@
 "use client"
+import image1 from'../../../public/Images/5.jpg'
+import image2 from'../../../public/Images/6.jpg'
+import image3 from'../../../public/Images/3.jpg'
+import image4 from'../../../public/Images/4.jpg'
 
 import { useState } from "react"
 
@@ -70,7 +74,7 @@ export default function HeroSection() {
               {/* Top Left - Beach Image */}
               <div className="absolute top-0 left-0 w-56 h-44 rounded-3xl overflow-hidden shadow-xl">
                 <img
-                  src="/tropical-beach.jpg"
+                  src={image1}
                   alt="Tropical beach with turquoise water"
                   className="w-full h-full object-cover"
                 />
@@ -79,7 +83,7 @@ export default function HeroSection() {
               {/* Top Right - Mountain Hiker */}
               <div className="absolute top-0 right-0 w-44 h-56 rounded-3xl overflow-hidden shadow-xl">
                 <img
-                  src="/group-of-adventurers-with-backpacks-hiking.jpg"
+                  src={image2}
                   alt="Adventure group with backpacks"
                   className="w-full h-full object-cover"
                 />
@@ -88,7 +92,7 @@ export default function HeroSection() {
               {/* Bottom Left - Landscape */}
               <div className="absolute bottom-0 left-0 w-56 h-44 rounded-3xl overflow-hidden shadow-xl">
                 <img
-                  src="/scenic-landscape-with-mountains-and-sky.jpg"
+                  src={image3}
                   alt="Scenic mountain landscape"
                   className="w-full h-full object-cover"
                 />
@@ -97,9 +101,9 @@ export default function HeroSection() {
               {/* Bottom Right - Mountain Peak */}
               <div className="absolute bottom-0 right-0 w-44 h-56 rounded-3xl overflow-hidden shadow-xl">
                 <img
-                  src="/mountain-hiking-adventure-with-scenic-view.jpg"
+                  src={image4}
                   alt="Mountain hiking adventure"
-                  className="w-full h-full object-cover"
+                  className="w-full  h-full object-cover"
                 />
               </div>
             </div>
