@@ -105,7 +105,7 @@ export default function Services() {
 
       {/* Hero Section */}
       <motion.div
-        className="relative h-[38vw] mb-20 rounded-3xl overflow-hidden shadow-[0_0_25px_rgba(255,115,0,0.3)]"
+        className="relative sm:h-38vw] md:h-[38vw] mb-20 rounded-b-3xl overflow-hidden shadow-[0_0_25px_rgba(255,115,0,0.3)]"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -128,7 +128,7 @@ export default function Services() {
             animate={{ y: [0, 15, 0] }}
             transition={{ duration: 4, repeat: Infinity }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-orange-400 mb-4 drop-shadow-[0_0_10px_rgba(255,115,0,0.6)]">
+            <h2 className="text-2xl md:text-5xl font-bold text-orange-400 mb-4 drop-shadow-[0_0_10px_rgba(255,115,0,0.6)]">
               Experience Premium Transportation
             </h2>
             <p className="text-black text-lg font-semibold max-w-2xl mx-auto">

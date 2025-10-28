@@ -20,7 +20,7 @@ const reviews = [
 
 export default function CustomerReviews() {
   return (
-    <section className="bg-[#fff8f5] py-20  text-center overflow-hidden">
+    <section className="bg-linear-to-r from-orange-200 via-pink-100 to-orange-200 py-20  text-center overflow-hidden">
       {/* Title */}
       <h2 className="text-2xl md:text-3xl font-bold text-[#0a093d]">
         Customer Reviews

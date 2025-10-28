@@ -54,7 +54,7 @@ export default function Navbar() {
           className="flex items-center gap-2"
         >
           <img
-            src="/Images/logo.jpeg"
+            src="/Images/logo.png"
             alt="logo"
             className="w-20 drop-shadow-[0_0_10px_rgba(255,165,0,0.3)] hover:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)] transition-all duration-500"
           />

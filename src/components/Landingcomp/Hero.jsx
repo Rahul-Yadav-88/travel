@@ -3,7 +3,7 @@ import { motion as Motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <main className="bg-linear-to-r from-orange-50 via-pink-50 to-orange-100 overflow-hidden perspective-[1000px]">
+    <main className="bg-linear-to-r from-orange-200 via-pink-100 to-orange-200 overflow-hidden perspective-[1000px]">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-8 sm:py-12 lg:py-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
