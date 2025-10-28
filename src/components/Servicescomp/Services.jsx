@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import {
   Briefcase,
@@ -10,6 +11,7 @@ import {
   Users,
   ChevronUp,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Services() {
   const [expandedService, setExpandedService] = useState(null);
@@ -81,13 +83,13 @@ export default function Services() {
   };
 
   const buttonClasses =
-    "text-red-500 text-sm mt-5 cursor-pointer  font-bold uppercase tracking-[0.2em] hover:text-red-600 transition-colors flex items-center gap-1";
+    "text-red-500 text-sm mt-5 cursor-pointer font-bold uppercase tracking-[0.2em] hover:text-red-600 transition-colors flex items-center gap-1";
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
       {/* Header */}
-      <div className="bg-orange-400 pt-16 pb-60 px-4 sm:px-8 relative  shadow-inner">
-        <h2 className="text-white text-3xl  md:text-5xl font-extrabold text-center tracking-widest uppercase">
+      <div className="bg-orange-400 pt-16 pb-60 px-4 sm:px-8 relative shadow-inner">
+        <h2 className="text-white text-3xl md:text-5xl font-extrabold text-center tracking-widest uppercase">
           OUR SERVICES
         </h2>
       </div>
@@ -99,15 +101,24 @@ export default function Services() {
             const isExpanded = expandedService === index;
 
             return (
-              <div
+              <motion.div
                 key={index}
-                className={`
-                  bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg transition-all duration-500 
-                  overflow-hidden border border-gray-100
-                  ${isExpanded ? "lg:col-span-4 shadow-2xl scale-[1.01]" : "hover:shadow-xl hover:scale-[1.03]"}
-                `}
+                className={`bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg border border-gray-100 overflow-hidden ${
+                  isExpanded
+                    ? "lg:col-span-4 shadow-2xl scale-[1.01]"
+                    : "hover:shadow-xl"
+                }`}
+                initial={{ opacity: 0, y: 40, rotateX: 10 }}
+                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{
+                  scale: 1.05,
+                  rotateX: -5,
+                  rotateY: 5,
+                  boxShadow: "0 20px 30px rgba(0,0,0,0.15)",
+                }}
+                whileTap={{ scale: 0.98 }}
               >
-                {/* Card Inner */}
                 <div className="flex flex-col h-full p-8 transition-all duration-300">
                   <div className="mb-5 p-3 bg-red-50 rounded-lg text-red-500">
                     {service.icon}
@@ -121,14 +132,14 @@ export default function Services() {
                     {service.shortDesc}
                   </p>
 
-                  
-                  
-                  <div
-                    className={`transition-all duration-500 ease-in-out ${
-                      isExpanded
-                        ? "max-h-[500px] opacity-100 mt-6"
-                        : "max-h-0 opacity-0 mt-0"
-                    } overflow-hidden`}
+                  {/* Expandable content */}
+                  <motion.div
+                    animate={{
+                      height: isExpanded ? "auto" : 0,
+                      opacity: isExpanded ? 1 : 0,
+                    }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    className="overflow-hidden"
                   >
                     <div className="border-t border-gray-200 pt-4">
                       <p className="text-gray-700 text-sm leading-relaxed mb-3">
@@ -138,11 +149,14 @@ export default function Services() {
                         Need more details? Contact our team for a personalized consultation.
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
 
-                  <button
+                  {/* Toggle Button */}
+                  <motion.button
                     onClick={() => toggleService(index)}
                     className={buttonClasses}
+                    // whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     {isExpanded ? (
                       <>
@@ -155,10 +169,9 @@ export default function Services() {
                         <ChevronUp className="w-4 h-4 rotate-180 transition-transform duration-300" />
                       </>
                     )}
-                  </button>
-
+                  </motion.button>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
