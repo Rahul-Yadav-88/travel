@@ -15,7 +15,9 @@ function LandingPage() {
   return (
     <>
     <Navbar/>
+    <div className='pt-16'>
     <Hero/>
+    </div>
     <TrustedBrands/>
     <PopularThings/>
     <TrendingDestinations/>

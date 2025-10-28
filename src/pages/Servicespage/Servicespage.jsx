@@ -7,7 +7,10 @@ function Aboutpage() {
   return (
     <>
     <Navbar/>
+    <div className='pt-16'>
     <Services/>
+
+    </div>
     <Footer/>
     </>
   )
