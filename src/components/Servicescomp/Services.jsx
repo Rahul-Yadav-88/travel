@@ -12,6 +12,7 @@ import {
   ChevronUp,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Services() {
   const [expandedService, setExpandedService] = useState(null);
@@ -145,9 +146,9 @@ export default function Services() {
                       <p className="text-gray-700 text-sm leading-relaxed mb-3">
                         {service.fullDesc}
                       </p>
-                      <div className="bg-red-50 rounded-lg p-3 text-sm text-red-700 font-medium">
+                      <Link to={'/contactus'} className="bg-red-50 rounded-lg p-3 text-sm text-red-700 font-medium">
                         Need more details? Contact our team for a personalized consultation.
-                      </div>
+                      </Link>
                     </div>
                   </motion.div>
 
