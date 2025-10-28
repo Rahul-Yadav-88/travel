@@ -3,10 +3,10 @@ import { Shield, Clock, Award, Users, Building2, Quote, Target, TrendingUp, Chec
 
 export default function AboutPage() {
   const coreValues = [
-    { icon: Clock, title: 'Punctuality', description: 'Always on time, every time' },
-    { icon: Shield, title: 'Safety', description: 'Your security is our priority' },
-    { icon: Award, title: 'Integrity', description: 'Honest and transparent service' },
-    { icon: Users, title: 'Customer First', description: 'Your satisfaction drives us' }
+    { icon: Clock, title: 'Punctuality', description: 'We respect your time — every trip begins and ends exactly as scheduled.' },
+    { icon: Shield, title: 'Safety', description: 'Each vehicle is GPS-equipped, CCTV-monitored, and maintained beyond compliance standards.' },
+    { icon: Award, title: 'Integrity', description: 'Transparent pricing, clear communication, and honest partnerships.' },
+    { icon: Users, title: 'Customer First', description: 'Every client, big or small, gets personal attention and responsive service' }
   ];
 
   const infrastructure = [
@@ -32,11 +32,13 @@ export default function AboutPage() {
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-            <span className="text-sm font-semibold tracking-wide">TRUSTED TRANSPORTATION PARTNER</span>
+            <span className="text-sm font-semibold tracking-wide">About TCS Travels | Leading Corporate Transport Partner</span>
           </div>
           <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">About TCS Travels</h1>
           <p className="text-2xl text-orange-50 max-w-3xl leading-relaxed">
-            Redefining corporate and group transportation in India with excellence, safety, and innovation.
+            TCS Travels is a Delhi-based professional transport service provider offering reliable corporate
+staff movement, airport transfers, school transport, and tour solutions — powered by a modern
+fleet, trained chauffeurs, and 13+ years of operational excellence.
           </p>
         </div>
       </div>
@@ -49,8 +51,22 @@ export default function AboutPage() {
               <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mb-6"></div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Leading the Way in Professional Transport</h2>
               <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                TCS Travels is a Delhi-based professional transport service provider offering corporate staff movement, 
-                airport transfers, and tour solutions with a modern fleet and trained chauffeurs.
+                Founded in 2010, TCS Travels set out with a simple vision — to redefine corporate and group
+transportation in India by combining professionalism with technology and human care.
+From a modest start with just a few vehicles, we have grown into one of the most trusted names
+in organized employee and institutional transport, operating across Delhi NCR and multiple
+states.
+With over 13 years of experience, our company continues to stand for reliability, punctuality,
+and safety — ensuring smooth, on-time travel experiences for thousands of passengers daily
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                We provide complete mobility management for: <br />
+• Corporates and industrial units <br />
+• Schools and educational institutions <br />
+• Airport transfer clients <br />
+• Short tours, events, and outstation rentals <br />
+Our philosophy is simple — every trip matters, every passenger matters, and every minute
+counts.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
                 With 13+ years of operational excellence, we specialize in reliable, safe, and technology-driven travel 
@@ -68,10 +84,17 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Target className="w-8 h-8 text-white" />
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">🌟 Our Vision</h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                To be the most trusted and technologically advanced transport partner in India — known for 
-                safety, punctuality, and customer delight.
+               
+We transform everyday travel into an experience of comfort, reliability, and innovation — redefining corporate and institutional transportation for the modern era. <br />
+We aim to create a mobility ecosystem that: <br />
+• We prioritize passenger safety through technology, discipline, and genuine care. <br />
+• Builds long-term trust with clients through transparent and ethical operations. <br />
+• Integrates modern innovation to make every journey efficient and sustainable. <br />
+• Empowers people and businesses to travel seamlessly, confidently, and on time. <br />
+• Contributes to a cleaner future with eco-friendly and compliant fleet operations. <br />
+Every service we deliver moves us toward our vision — making TCS Travels a symbol of reliability, innovation, and excellence.
               </p>
             </div>
           </div>
@@ -82,10 +105,17 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
-              <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
+              <h2 className="text-3xl font-bold mb-4">🎯 Our Mission</h2>
               <p className="text-orange-50 text-lg leading-relaxed">
-                To deliver professional, safe, and reliable travel services through modern vehicles, trained 
-                manpower, and proactive communication with clients.
+                To deliver professional, safe, and reliable travel services through a blend of modern
+technology and dedicated manpower. <br />
+We continuously invest in: <br />
+• GPS-based fleet management and route optimization. <br />
+• We offer real-time tracking dashboards that provide clients with complete visibility and control over their trips. <br />
+• We conduct comprehensive driver training programs focused on safety, professionalism, and courteous service to ensure the best travel experience. <br />
+•Our 24×7 operations support ensures instant issue resolution and seamless coordination for uninterrupted travel experiences.<br />
+Every process we build and every decision we make aligns with one mission — to ensure peace
+of mind for our clients and passengers.
               </p>
             </div>
           </div>

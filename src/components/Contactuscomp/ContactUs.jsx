@@ -14,8 +14,7 @@ const ContactUs = () => {
             </div>
             <div className="contact-form mt-10 flex flex-col md:flex-row md:gap-30 gap-10 justify-center">
                 <div className="message md:p-0 p-5 font-semibold flex flex-col md:w-1/4 gap-4"><h1 className='text-3xl'>Let's talk with us</h1>
-                    <p className='font-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Deleniti cum earum doloribus itaque.</p>
+                    <p className='font-light'>From corporate rides to family tours, we provide dependable travel services that fit your schedule, comfort, and budget.</p>
                     <ul className="address flex gap-3 flex-col">
                         <li className='flex gap-2'><LocateFixed /> <span>Shop No.24, First Floor,CSC, DDA Market, Sector-22, HAF,PKT-B, Dwarka, New Delhi-110075</span></li>
                         <li className='flex gap-2'><Phone /> <span>+91 9711165079</span></li>

@@ -4,17 +4,17 @@ const reviews = [
   {
     img: "https://i.pravatar.cc/100?img=1",
     name: "Albert Cole",
-    role: "Designer",
+    // role: "Designer",
   },
   {
     img: "https://i.pravatar.cc/100?img=2",
     name: "Alison Dawn",
-    role: "WordPress Developer",
+    // role: "WordPress Developer",
   },
   {
     img: "https://i.pravatar.cc/100?img=3",
     name: "Daniel Parker",
-    role: "Front-end Developer",
+    // role: "Front-end Developer",
   },
 ];
 
