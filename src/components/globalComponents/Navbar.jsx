@@ -15,7 +15,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center py-4">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img src={logo} alt="logo" className="w-32 md:w-40" />
+          <img src='/Images/logo.jpeg' alt="logo" className="w-20" />
         </div>
 
         {/* Desktop Links */}
