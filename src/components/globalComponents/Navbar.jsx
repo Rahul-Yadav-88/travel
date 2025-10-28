@@ -9,8 +9,6 @@ import {
   Briefcase,
   Info,
   Contact,
-  DollarSign,
-  Headset,
 } from "lucide-react";
 
 export default function Navbar() {
@@ -25,16 +23,16 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const linkClass =
-    "relative block text-gray-800 font-medium hover:text-orange-500 transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-orange-500 after:transition-all after:duration-500 hover:after:w-full";
-
   const menuItems = [
     { name: "Home", path: "/", icon: <House size={18} /> },
     { name: "Services", path: "/Services", icon: <Briefcase size={18} /> },
     { name: "About Us", path: "/aboutus", icon: <Info size={18} /> },
     { name: "Contact Us", path: "/contactus", icon: <Contact size={18} /> },
-   
   ];
+
+  const linkClass = (isActive) =>
+    `relative block font-medium transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-orange-500 after:transition-all after:duration-500 hover:after:w-full
+     ${isActive ? "text-orange-500" : scrolled ? "text-white hover:text-orange-400" : "text-gray-800 hover:text-orange-500"}`;
 
   return (
     <motion.header
@@ -43,7 +41,7 @@ export default function Navbar() {
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-lg"
+          ? "bg-slate-900/90 backdrop-blur-md shadow-lg"
           : "bg-transparent backdrop-blur-sm"
       }`}
     >
@@ -77,9 +75,7 @@ export default function Navbar() {
             >
               <NavLink
                 to={item.path}
-                className={({ isActive }) =>
-                  isActive ? `${linkClass} text-orange-500` : linkClass
-                }
+                className={({ isActive }) => linkClass(isActive)}
               >
                 {item.name}
               </NavLink>
@@ -90,7 +86,9 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <motion.button
           whileTap={{ scale: 0.9 }}
-          className="md:hidden text-orange-600 focus:outline-none"
+          className={`md:hidden focus:outline-none ${
+            scrolled ? "text-white" : "text-orange-600"
+          }`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -106,7 +104,9 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="md:hidden bg-white/90 backdrop-blur-md border-t border-gray-100 shadow-inner overflow-hidden"
+            className={`md:hidden ${
+              scrolled ? "bg-slate-900/90 text-white" : "bg-white/90 text-gray-800"
+            } backdrop-blur-md border-t border-gray-100 shadow-inner overflow-hidden`}
           >
             <nav className="flex flex-col items-start px-6 py-4 gap-4">
               {menuItems.map((item, index) => (
@@ -124,7 +124,7 @@ export default function Navbar() {
                   <NavLink
                     to={item.path}
                     onClick={() => setIsOpen(false)}
-                    className={linkClass}
+                    className={({ isActive }) => linkClass(isActive)}
                   >
                     <div className="flex gap-2 items-center">
                       {item.icon} {item.name}

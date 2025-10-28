@@ -50,13 +50,13 @@ export default function ServiceCard({ service, index, isExpanded, onToggle }) {
               className="mb-6 p-4 bg-gradient-to-br from-orange-500/20 to-orange-500/5 rounded-xl border border-orange-500/20 w-fit group-hover:from-orange-500/30 group-hover:to-orange-500/10 transition-all duration-300"
               whileHover={{
                 scale: 1.1,
-                rotate: 5,
+                rotate: 8,
               }}
               animate={{
-                rotateZ: [-15, 15, -15],
+                rotateZ: [-25, 25, -25],
               }}
               transition={{
-                duration: 3,
+                duration: 1,
                 repeat: Number.POSITIVE_INFINITY,
                 ease: "easeInOut",
               }}
