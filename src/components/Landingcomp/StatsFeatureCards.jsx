@@ -26,15 +26,15 @@ export default function StatsFeatureCards() {
 
   const features = [
     {
-      title: "Best staycation deals",
-      description: "Enjoy these pool staycation promotions in Bangalore",
-      buttonText: "See activities",
+      title: "Corporate Commute Solutions",
+      description: "Efficient, comfortable, and cost-optimized employee transport plans — designed for businesses that value time and reliability.",
+      buttonText: "Explore Corporate Services",
       image: "/Images/busimg.png"
     },
     {
-      title: "All Time Favourite Activities in Dubai",
-      description: "Don't forget to check out these activities while you're here",
-      buttonText: "See activities",
+      title: "Outstation & Tourist Bus Rentals",
+      description: "Discover comfort on every kilometer — luxury coaches and tempo travellers for all your travel needs.",
+      buttonText: "Connect for Enquiry",
       image: "/Images/busimg2.png"
     }
   ];
@@ -75,7 +75,7 @@ export default function StatsFeatureCards() {
               
               {/* Content Overlay */}
               <div className="relative h-full flex flex-col justify-end p-4 sm:p-6 md:p-8">
-                <p className="text-xs sm:text-sm text-white/90 mb-1 sm:mb-2">
+                <p className="text-xs font-semibold sm:text-sm text-white/90 mb-1 sm:mb-2">
                   {feature.description}
                 </p>
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 md:mb-6">
