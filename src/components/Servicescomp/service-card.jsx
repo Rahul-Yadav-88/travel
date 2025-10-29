@@ -1,6 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import { ChevronUp } from "lucide-react"
+import { Link } from "react-router-dom"
 
 export default function ServiceCard({ service, index, isExpanded, onToggle }) {
   return (
@@ -86,12 +87,14 @@ export default function ServiceCard({ service, index, isExpanded, onToggle }) {
             >
               <div className="border-t border-slate-700/50 pt-4">
                 <p className="text-slate-300 text-sm leading-relaxed mb-4">{service.fullDesc}</p>
+                <Link to={'/contactus'}>
                 <motion.div
                   className="bg-gradient-to-r from-orange-500/10 to-orange-500/5 border border-orange-500/20 rounded-lg p-4 text-sm text-orange-300 font-medium hover:border-orange-500/40 transition-colors duration-300"
                   whileHover={{ scale: 1.02 }}
                 >
                   Need more details? Contact our team for a personalized consultation.
                 </motion.div>
+                </Link>
               </div>
             </motion.div>
 

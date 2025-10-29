@@ -1,5 +1,6 @@
 import React from "react";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -30,12 +31,18 @@ export default function Footer() {
         {/* Quick Links */}
         <div>
           <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2 text-sm">
+          {/* <ul className="space-y-2 text-sm">
             <li><a href="#" className="hover:text-white">Home</a></li>
-            <li><a href="#" className="hover:text-white">About Us</a></li>
-            <li><a href="#" className="hover:text-white">Services</a></li>
-            <li><a href="#" className="hover:text-white">Contact</a></li>
-          </ul>
+            <li><a href="#aboutus" className="hover:text-white">About Us</a></li>
+            <li><a href="#Services" className="hover:text-white">Services</a></li>
+            <li><a href="#contactus" className="hover:text-white">Contact</a></li>
+          </ul> */}
+    <div className="flex flex-col space-y-2">
+            <Link to={'/'}>Home</Link>
+          <Link to={'/aboutus'}>About</Link>
+          <Link to={'/Services'}>Services</Link>
+          <Link to={'/contactus'}>Contact</Link>
+    </div>
         </div>
 
         {/* Support */}
@@ -44,8 +51,8 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li><a href="#" className="hover:text-white">FAQ</a></li>
             <li><a href="#" className="hover:text-white">Help Center</a></li>
-            <li><a href="#" className="hover:text-white">Privacy Policy</a></li>
-            <li><a href="#" className="hover:text-white">Terms & Conditions</a></li>
+            {/* <li><a href="#" className="hover:text-white">Privacy Policy</a></li>
+            <li><a href="#" className="hover:text-white">Terms & Conditions</a></li> */}
           </ul>
         </div>
 

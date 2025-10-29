@@ -1,5 +1,6 @@
 "use client";
 import { motion as Motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
@@ -75,7 +76,7 @@ export default function HeroSection() {
                 transition: { type: "spring", stiffness: 200 },
               }}
             >
-              Talk to Our Transport Consultant
+              <Link to={'/contactus'}>Talk to Our Transport Consultant</Link>
             </Motion.button>
 
             <Motion.p

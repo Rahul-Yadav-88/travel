@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import NewsletterImage from "../../assets/newsletter.png";
+import { Link } from "react-router-dom";
 
 const Newsletter = () => {
   const sectionRef = useRef(null);
@@ -57,13 +58,14 @@ const Newsletter = () => {
             school fleet solution, or a one-time travel arrangement, our team is
             available around the clock to help you choose the best option.
           </p>
-
+           <Link to={'/contactus'}>
           <button
             type="submit"
             className="bg-white text-gray-800 px-8 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-500 transform hover:scale-110 hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] animate-floatButton"
           >
-            Contact Us
+            Contact
           </button>
+          </Link>
         </div>
       </div>
 
