@@ -29,13 +29,13 @@ export default function StatsFeatureCards() {
       title: "Best staycation deals",
       description: "Enjoy these pool staycation promotions in Bangalore",
       buttonText: "See activities",
-      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80"
+      image: "/Images/busimg.png"
     },
     {
       title: "All Time Favourite Activities in Dubai",
       description: "Don't forget to check out these activities while you're here",
       buttonText: "See activities",
-      image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80"
+      image: "/Images/busimg2.png"
     }
   ];
 

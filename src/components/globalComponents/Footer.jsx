@@ -8,7 +8,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Brand Section */}
         <div>
-          <h2 className="text-white text-2xl font-bold mb-4">Viatours</h2>
+          <img src="/Images/logo.png" alt="" className="w-20"/>
+          {/* <h2 className="text-white text-2xl font-bold mb-4">Viatours</h2> */}
           <p className="text-sm leading-relaxed">
             Explore the world with us — discover destinations, tours, and experiences tailored just for you.
           </p>
@@ -75,7 +76,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
-        © 2025 Viatours. All rights reserved.
+        © 2025 TCS Travels. All rights reserved.
       </div>
     </footer>
   );

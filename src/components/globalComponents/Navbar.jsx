@@ -58,6 +58,10 @@ export default function Navbar() {
             alt="logo"
             className="w-20 drop-shadow-[0_0_10px_rgba(255,165,0,0.3)] hover:drop-shadow-[0_0_20px_rgba(255,165,0,0.5)] transition-all duration-500"
           />
+          <div className="flex flex-col">
+            <h4 className="font-bold text-orange-600">TCS Travels</h4>
+          <h5 className="font-semibold text-gray-500 text-sm">MARWAD Travels</h5>
+          </div>
         </motion.div>
 
         {/* Desktop Navigation */}
